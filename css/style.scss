@@ -1,53 +1,134 @@
+// Normalize and Fixes
 @import "_normalize";
 @import "_clearfix";
 
+// Font Imports
 @import url(http://fonts.googleapis.com/css?family=Dosis:300);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 
+// Mixins
 @mixin DosisLight {
 	font: {
     family: 'Dosis', Arial, sans-serif;
     weight: 300;
   }
 }
+@mixin LatoLight{
+	font: {
+		family: 'Lato', Arial, sans-serif;
+		weight: 300;
+	}
+}
+@mixin LatoRegular{
+	font: {
+		family: 'Lato', Arial, sans-serif;
+		weight: 400;
+	}
+}
+@mixin borderradius($size){
+	-moz-border-radius: $size;
+	-webkit-border-radius: $size;
+	border-radius: $size;
+}
+@mixin borderbox{
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+// Colors 
 $purple: #352a38;
+$yellow: #ffe147;
+$blue: #97CBE8;
+$dkblue: #384851;
 $offwhite: #eee;
+$gold: #eab32c;
 
-h1, h2, h3{
-	@include DosisLight;
+// Font Sizes
+$pxfontsize: 14px;
+$pxlineheight: 21px;
+@function em($px, $base: $pxfontsize) { // Default should be the font size we want
+	@return ($px / $base) * 1em;
 }
+@function lineheight($rows, $base: $pxlineheight) {
+	@return em($rows*$pxlineheight, $base);
+}
+$emfontsize: em($pxfontsize,16px); // Requires the browser default 16px as a base
+$emlineheight: em($pxlineheight);
 
-#nav, #masthead, #content, #colophone{
-	margin: 0 .5em;
+// Basic Styles
+body{
+	@include LatoLight;
+	font-size: $emfontsize; // Font size default
+	line-height: $emlineheight; // Line height defult
 }
-#masthead{
-	color: $offwhite;
+p, ul, ol, dl{ 
+	padding-bottom: $emlineheight; 
 }
-#container-header{
-	background: $purple;
-	height: 350px;
-	width: 100%;
+table, blockquote{
+	margin-bottom: $emlineheight;
 }
-#container-content{
-	padding: 1em 0;
-}
-#container-footer{
-	padding: 1em 0;
-	background: $purple;
-	color: $offwhite;
-}
-.box{
-	padding: 14px;
+a{
+	color: lighten($purple,30%);
+	text-decoration: none;
+	border-bottom: 1px solid lighten($purple,30%);
+	&:hover{
+		color: $gold;
+		border-bottom-color: $gold;
+	}
 }
 img{
 	max-width: 100%;
 }
 
+#nav, #masthead, #content, #colophone{
+	margin: 0 3%;
+}
 @media screen and (min-width: 768px){
-	#portfolio article, #resume article{
-		float: left;
-		width: 33%;
+	#nav, #masthead, #content, #colophone{
+		margin: 0 5%;
 	}
+}
+
+// Headers
+h1, h2, h3{
+	@include DosisLight;
+}
+h1{ // 37px recommended
+	font-size: em(37px);
+	line-height: lineheight(2,37px);
+}
+h2{ // 23px recommended
+	display: block;
+	font-size: em(23px);
+	line-height: lineheight(2,23px);
+}
+h3{ // 18px recommended
+	color: $gold;
+	display: block;
+	font-size: em(18px);
+	line-height: lineheight(1,18px);
+}
+h4, h5, h6{ 
+	font-size: 1em; 
+	font-weight: 400;
+}
+h5{
+	color: darken($blue,10%);
+	span{
+		color: #666;
+		display: block;
+	}
+}
+
+@import "_nav";
+@import "_header";
+@import "_portfolio";
+@import "_footer";
+
+.tinytext{ // 11px recommended 
+	font-size: em(11px);
+	line-height: lineheight(1,11px);
 }
 
 @import "_print";

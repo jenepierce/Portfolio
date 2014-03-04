@@ -4,38 +4,46 @@
 		<meta charset="UTF-8">
 		<title>Jen Pierce's Portfolio</title>
 		<link rel="stylesheet" href="./css/style.css"/>
+<!-- 		<link rel="stylesheet" href="http://basehold.it/21/000000"> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Normalize hide address bar for iOS and Android -->
 		<script src="./js/hideaddressbar.js"></script>
+		<!-- Add media query support for IE8 and under. Must place media queries in external stylesheet -->
 		<script src="./js/respond.min.js"></script>
-		
+		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
+		<script src="./js/picturefill.js"></script>
+		<script src="./js/matchmedia.js"></script>
+
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 				
 	</head>
-
 	<body lang="en">
 
 		<div id="container-nav">
 			<section id="nav">
-				<h3>Jen Pierce</h3>
-				<!--
+				<h3><a href="portfolio_work.html">Jen Pierce</a></h3>
+				<!-- Checkbox hack markup -->
+				<input type="checkbox" id="toggle" />
+				<label for="toggle" onclick>Menu</label>
+				<!-- /Checkbox hack markup -->
 				<nav>
 					<ul>
-						<li><a href="">Portfolio</a></li>
-						<li><a href="">Resume</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#resume">Resume</a></li>
 						<li><a href="http://lnkd.in/GA8H6e">LinkedIn Profile</a></li>
-						<li><a href="">Contact</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
-				-->
+				
 			</section>
 		</div>
 
 		<div id="container-header"> 
 			<header id="masthead">	
 				<h1>Hi, I'm Jen</h1>
-				<h2>A web designer/developer with a passion for design and user experience, a recent transplant to the greater Portland, OR area. Currently seeking full time or contract opportunities in front-end design.</h2>
+				<h2>A web designer/developer with a passion for design and user experience, a recent transplant to the greater Portland, OR area. <br />Currently seeking full time or contract opportunities in web design or front-end development.</h2>
 			</header>
 		</div>
 
@@ -50,44 +58,79 @@
 					
 					<article>
 						<h4>Alumni &amp; Friends</h4>
+<!--
 						<figure>
-							<img src="./img/AlumniAndFriends_1280.png">	
+							<img src="./img/AlumniAndFriends_1280.jpg">	
 						</figure>
-					</article>
-
-					<article>
-						<h4>Equine Rehabilitation Center</h4>
-						<figure>
-							<img src="./img/EquineRehab_1280.png">
-						</figure>
+-->
+						<div data-picture data-alt="Alumni And Friends">
+				        <div data-src="img/AlumniAndFriends-s.jpg"></div>
+				        <div data-src="img/AlumniAndFriends-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
+				        <div data-src="img/AlumniAndFriends-m.jpg" data-media="(min-width: 1400px)"></div>
+				        <noscript>
+				            <img src="./img/AlumniAndFriends-s.jpg" alt="Maya Chopra">
+				        </noscript>
+				    </div>
 					</article>
 					
 					<article>
 						<h4>Morrisville State College</h4>
-						<figure>
-							<img src="./img/Morrisville_1280.png">
-						</figure>
+						<div data-picture data-alt="Morrisville State College">
+							<div data-src="img/Morrisville-s.jpg"></div>
+			        <div data-src="img/Morrisville-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
+			        <div data-src="img/Morrisville-m.jpg" data-media="(min-width: 1400px)"></div>
+							<noscript>
+								<img src="./img/Morrisville-s.jpg">
+							</noscript>
+						</div>
+					</article>
+					
+					<article>
+						<h4>Equine Rehabilitation Center</h4>
+						<div data-picture data-alt="Equine Rehabilitation Center">
+							<div data-src="img/EquineRehab-s.jpg"></div>
+			        <div data-src="img/EquineRehab-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
+			        <div data-src="img/EquineRehab-m.jpg" data-media="(min-width: 1400px)"></div>
+							<noscript>
+								<img src="./img/EquineRehab-s.jpg">
+							</noscript>
+						</div>
 					</article>
 					
 					<article>
 						<h4>IcePlex</h4>
-						<figure>
-							<img src="./img/IcePlex_1280.png">
-						</figure>
+						<div data-picture data-alt="IcePlex">
+							<div data-src="img/IcePlex-s.jpg"></div>
+			        <div data-src="img/IcePlex-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
+			        <div data-src="img/IcePlex-m.jpg" data-media="(min-width: 1400px)"></div>
+							<noscript>
+								<img src="./img/IcePlex-s.jpg" alt="Maya Chopra">
+							</noscript>
+						</div>
 					</article>
 					
 					<article>
 						<h4>Copper Turret Restaurant</h4>
-						<figure>
-							<img src="./img/CopperTurret_1280.png">
-						</figure>
+						<div data-picture data-alt="Copper Turret Restaurant">
+							<div data-src="img/CopperTurret-s.jpg"></div>
+			        <div data-src="img/CopperTurret-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
+			        <div data-src="img/CopperTurret-m.jpg" data-media="(min-width: 1400px)"></div>
+							<noscript>
+								<img src="./img/CopperTurret-s.jpg" alt="Maya Chopra">
+							</noscript>
+						</div>
 					</article>
 				
 					<article>
 						<h4>Dining</h4>
-						<figure>
-							<img src="./img/Dining_1280.png">
-						</figure>
+						<div data-picture data-alt="Dining">
+							<div data-src="img/Dining-s.jpg"></div>
+			        <div data-src="img/Dining-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
+			        <div data-src="img/Dining-m.jpg" data-media="(min-width: 1400px)"></div>
+							<noscript>
+								<img src="./img/Dining-s.jpg" alt="Maya Chopra">
+							</noscript>
+						</div>
 					</article>
 				</section>
 
@@ -97,51 +140,48 @@
 						<h3>Resume</h3>
 					</header>
 
-					<article>
-						<div class="box">
-							<h4>Work Experience</h4>
-							<h5>Web Designer & Developer, Morrisville State College, Dec. 2006 - Jan. 2014</h5>
-							<p>Responsible for web design, development, maintenance and support for Morrisville State College top-tier websites and Morrisville Auxiliary Corporation websites. Built several websites from the ground up, from the initial planning stages with clients to building the front-end (HTML, CSS3, and JavaScript) and back-end (ASP/VB.net, database design and modification, CMS development)</p>
-						</div>
+					<article class="experience">
+						<h4>Work Experience</h4>
+						<h5>Web Designer & Developer, Morrisville State College, <span>Morrisville, NY: Dec. 2006 - Jan. 2014</span></h5>
+						<p>Responsible for web design, development, maintenance and support for Morrisville State College top-tier websites and Morrisville Auxiliary Corporation websites. Built several websites from the ground up, from the initial planning stages with clients to building the front-end (HTML, CSS3, and JavaScript) and back-end (ASP/VB.net, database design and modification, CMS development)</p>
+						<p>For a full work history, have a look at my <a href="http://lnkd.in/GA8H6e">LinkedIn Profile</a></p>
 					</article>
 
-					<article>
-						<div class="box">
-							<h4>Skills</h4>
-							<h5>Script &amp; Markup</h5>
-							<ul><li>HTML/XHTML</li>
-								<li>CSS, Sass, LESS</li>
-								<li>ASP/VB.net, familiar with PHP</li>
-								<li>SQL (Access, Microsoft SQL, Oracle)</li>
-								<li>jQuery, JavaScript, AJAX</li>
-							</ul>
-						
-							<h5>Programs</h5>
-							<ul>
-								<li>Adobe Creative Suite 6 (Dreamweaver, Photoshop, Illustrator, Flash, InDesign)</li>
-								<li>Microsoft Office Suite 2010</li>
-								<li>Access, Microsoft SQL</li>
-								<li>Coda 2</li>
-							</ul>
-						
-							<h5>Operating Systems</h5>
-							<ul>
-								<li>OSX, Windows 7, familiar with Linux</li>
-							</ul>
-						</div>
+					<article class="skills">
+						<h4>Skills</h4>
+						<h5>Script &amp; Markup</h5>
+						<ul><li>HTML/XHTML</li>
+							<li>CSS, Sass, LESS</li>
+							<li>jQuery, JavaScript, AJAX</li>
+							<li>ASP/VB.net, familiar with PHP</li>
+							<li>SQL (Access, Microsoft SQL, Oracle)</li>
+						</ul>
+					
+						<h5>Programs</h5>
+						<ul>
+							<li>Adobe Creative Suite 6 (Dreamweaver, Photoshop, Illustrator, Flash, InDesign)</li>
+							<li>Microsoft Office Suite 2010</li>
+							<li>Access, Microsoft SQL</li>
+							<li>Coda 2</li>
+						</ul>
+					
+						<h5>Operating Systems</h5>
+						<ul>
+							<li>OSX, Windows 7, familiar with Linux</li>
+						</ul>
 					</article>
 
-					<article>
-						<div class="box">
-							<h4>Education</h4>
-							<h5>B.A. Graphic Design, SUNY Oswego, 2002 - 2006</h5>
-							<p>Minored in Computer Science</p>
-						</div>
+					<article class="education">
+						<h4>Education</h4>
+						<h5>B.A. Graphic Design, SUNY Oswego, <span>Oswego, NY: Aug. 2002 - May 2006</span></h5>
+						<p>Minored in Computer Science</p>
 					</article>
 					
+<!--
 					<footer>
 						<p>For a full work history, have a look at my <a href="http://lnkd.in/GA8H6e">LinkedIn Profile</a></p>
 					</footer>
+-->
 				</section>
 				
 			</article>
@@ -149,6 +189,26 @@
 
 		<div id="container-footer">
 			<footer id="colophone">
+				<form id="contact">
+				    <fieldset>
+				        <legend>Contact</legend>
+				            <ul class="group">
+				                <li class="name">
+				                    <label for="name">Your Name:</label>
+				                    <input type="text" id="name" name="name" />
+				                </li>
+				                <li class="email">
+				                    <label for="email">Your Email:</label>
+				                    <input type="email" id="email" name="email" />
+				                </li>
+				                <li class="message">
+				                    <label for="message">Say Hello:</label>
+				                    <textarea id="message" name="message"></textarea>
+				                </li>
+				            </ul>
+				        <input class="send" type="submit" name="submit" value="Send" />
+				    </fieldset>
+				</form>
 				<p>©2013 all rights reserved. Fill out a form here to get in touch.</p>
 			</footer>
 		</div>

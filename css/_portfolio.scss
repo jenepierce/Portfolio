@@ -1,0 +1,36 @@
+/* Portfolio & Resume Styles, _portfolio.scss */
+#portfolio, #resume{
+	padding-bottom: $emlineheight;
+	article{
+		@include borderbox;	
+	}
+}
+#portfolio img{
+	border: 1px solid #eee;
+}
+#resume {
+	article ul{
+		padding-left: $emfontsize*2;
+	}
+}
+@media screen and (min-width: 768px){
+	#portfolio article, #resume article{
+		padding-right: $emfontsize*2;
+	}
+	// Portfolio thumbnails 1/3
+	#portfolio article{
+		float: left;
+		width: 33.333%;
+	}
+	// Experience & Education 2/3 on left, Skills 1/3 on right
+	#resume article{
+		&.experience, &.education{
+			float: left;
+			width: 66.666%;
+		}
+		&.skills{
+			float: right;
+			width: 33.333%;
+		}
+	}
+}

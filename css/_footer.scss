@@ -1,0 +1,65 @@
+/* Footer and Form Styles, _footer.scss */
+#container-footer{
+	background: $purple;
+	color: $offwhite;
+}
+legend{
+	@extend h2;
+}
+label{
+	display: block;
+}
+input, textarea{
+	@include LatoRegular;
+}
+input, textarea, button{
+	@include borderbox;
+	@include borderradius(3px);
+	border: 0;
+	margin-bottom: $emlineheight/2;
+	padding: $emlineheight/4;
+	width: 100%;
+}
+input[type=submit], button {
+	padding: .975em;
+	border: 0;
+	background-color: $blue;
+	&:hover{
+		background-color: $yellow;
+	}
+}   
+textarea{
+	font-size: $emfontsize+rem;
+}
+form .group{
+	list-style: none;
+	padding-bottom: 0;
+}
+#message{
+	height: 4*$emlineheight;
+}
+.name, .email, .message{
+	@include borderbox;
+}
+@media screen and (min-width: 768px){
+	.name{
+		padding-right: $emfontsize;
+	}
+	.name, .email{
+		float: left;
+		width: 50%;
+	}
+}
+@media screen and (min-width: 960px){
+	.name, .email {
+    clear: both;
+    padding-right: $emfontsize; 
+  }
+	#message{
+  	width: 50%;
+  }
+  .send{
+	  width: 49%;
+	  @include borderbox;
+  }
+}

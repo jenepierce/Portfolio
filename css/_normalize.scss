@@ -137,3 +137,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Reset the font size and line height */
+html {
+  font-size: 100%;
+  line-height: 1;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}

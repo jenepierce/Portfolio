@@ -1,0 +1,32 @@
+/* Header Styles, _header.scss */
+#masthead{
+	color: $offwhite;
+	text-shadow:2px 2px 0px rgba(0,0,0,.5);
+}
+#container-header{
+	background: $purple; 
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;	
+	padding-bottom: $emlineheight/2;
+	padding-top: $emlineheight/2;
+	margin-bottom: $emlineheight/2;
+	width: 100%;
+	// Responsive background image for Header
+	// All swapped CSS background images must be in media queries to avoid downloading an image twice. Never put it in the default css
+	@media screen and (max-width: 480px){
+		background-image: url("../img/YellowDudeFocus-s.jpg");
+	}
+	@media screen and (min-width: 481px) and (max-width: 886px){
+		background-image: url("../img/YellowDudeFocus-m.jpg");
+	}
+	@media screen and (min-width: 887px){
+		background-image: url("../img/YellowDudeFocus-l.jpg");
+		padding: $emlineheight*2 0 $emlineheight*3 0;
+	}
+}
+@media screen and (min-width: 768px){
+	#container-header{
+		padding: $emlineheight*2 0 $emlineheight*3 0;
+	}
+}

@@ -2,21 +2,20 @@
 	#masthead {
 		color:black;
 	}
-	
 	#container-header {
 		height: auto;
 	}
-	
 	img {
 		width:2in;
 	}
-
 	#portfolio article{
 		float: left;
 		width: 33%;
 	}
-	
 	#container-footer	{
 		clear:both;
+	}
+	#contact{
+		display: none;
 	}
 }
