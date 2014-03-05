@@ -432,3 +432,38 @@ form .group {
 
   #contact {
     display: none; } }
+/* IE Fixes, _iefix.scss */
+.ie .name,
+.ie .email,
+.ie input,
+.ie textarea {
+  *behavior: url("http://www.jenpierce.com/test/aquentresponsive/js/boxsizing.htc"); }
+
+/*
+.ie #portfolio figure {
+    width: 100%;
+    box-sizing: border-box;
+    }
+.ie #portfolio figure {
+    *width: auto;
+    }
+*/
+#nav input[type=checkbox].checked ~ nav {
+  height: auto;
+  overflow: visible; }
+
+.ie #nav nav {
+  *height: auto;
+  *overflow: visible; }
+
+/*
+.ie #nav label { 
+    *background: none;
+    }
+*/
+@media screen and (min-width: 60em) {
+  .ie .message textarea {
+    *width: 49.9%; }
+
+  .ie .send {
+    *margin-left: 46.7%; } }

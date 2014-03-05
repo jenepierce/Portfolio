@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><html><![endif]-->
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -15,7 +17,23 @@
 		<script src="./js/matchmedia.js"></script>
 
 		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="./js/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Fixing the checkbox hack for IE -->
+		<!--[if lt IE 9]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+		<![endif]-->
+		<!--[if IE 8]>
+			<script src="./js/checkbox.js"></script>
+		<![endif]-->
+		<!--[if IE 6]>
+			<script src="./js/selectivizr-min.js"></script>
+		<![endif]-->
+		
+		<!-- Optimization -->
+		<!--[if lt IE 9]>
+			<script src="./js/html5.js"></script>
 		<![endif]-->
 				
 	</head>
@@ -68,7 +86,7 @@
 				        <div data-src="img/AlumniAndFriends-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
 				        <div data-src="img/AlumniAndFriends-m.jpg" data-media="(min-width: 1400px)"></div>
 				        <noscript>
-				            <img src="./img/AlumniAndFriends-s.jpg" alt="Maya Chopra">
+				            <img src="./img/AlumniAndFriends-s.jpg" alt="Alumni And Friends">
 				        </noscript>
 				    </div>
 					</article>
@@ -80,7 +98,7 @@
 			        <div data-src="img/Morrisville-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
 			        <div data-src="img/Morrisville-m.jpg" data-media="(min-width: 1400px)"></div>
 							<noscript>
-								<img src="./img/Morrisville-s.jpg">
+								<img src="./img/Morrisville-s.jpg" alt="Morrisville">
 							</noscript>
 						</div>
 					</article>
@@ -92,7 +110,7 @@
 			        <div data-src="img/EquineRehab-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
 			        <div data-src="img/EquineRehab-m.jpg" data-media="(min-width: 1400px)"></div>
 							<noscript>
-								<img src="./img/EquineRehab-s.jpg">
+								<img src="./img/EquineRehab-s.jpg" alt="Equine Rehabilitation Center">
 							</noscript>
 						</div>
 					</article>
@@ -104,7 +122,7 @@
 			        <div data-src="img/IcePlex-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
 			        <div data-src="img/IcePlex-m.jpg" data-media="(min-width: 1400px)"></div>
 							<noscript>
-								<img src="./img/IcePlex-s.jpg" alt="Maya Chopra">
+								<img src="./img/IcePlex-s.jpg" alt="IcePlex">
 							</noscript>
 						</div>
 					</article>
@@ -116,7 +134,7 @@
 			        <div data-src="img/CopperTurret-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
 			        <div data-src="img/CopperTurret-m.jpg" data-media="(min-width: 1400px)"></div>
 							<noscript>
-								<img src="./img/CopperTurret-s.jpg" alt="Maya Chopra">
+								<img src="./img/CopperTurret-s.jpg" alt="Copper Turret">
 							</noscript>
 						</div>
 					</article>
@@ -128,7 +146,7 @@
 			        <div data-src="img/Dining-m.jpg" data-media="(min-width: 480px) and (max-width: 768px)"></div>
 			        <div data-src="img/Dining-m.jpg" data-media="(min-width: 1400px)"></div>
 							<noscript>
-								<img src="./img/Dining-s.jpg" alt="Maya Chopra">
+								<img src="./img/Dining-s.jpg" alt="Dining">
 							</noscript>
 						</div>
 					</article>

@@ -1,0 +1,48 @@
+/* IE Fixes, _iefix.scss */
+
+// box-sizing polyfill, IE7 and below
+//.ie .wrapper,
+.ie .name,
+.ie .email,
+.ie input,
+.ie textarea {
+    *behavior: url("http://www.jenpierce.com/test/aquentresponsive/js/boxsizing.htc");
+} 
+/*
+.ie #portfolio figure {
+    width: 100%;
+    box-sizing: border-box;
+    }
+.ie #portfolio figure {
+    *width: auto;
+    }
+*/
+
+// IE8 .checked class for checkbox.js 
+#nav input[type=checkbox].checked ~ nav {
+    height: auto;
+    overflow: visible;  
+}
+
+// Always show nav, IE7 and below 
+.ie #nav nav {
+    *height: auto;
+    *overflow: visible;  
+}
+
+// Hide navicon, IE7 and below
+/*
+.ie #nav label { 
+    *background: none;
+    }
+*/
+
+// Form Fixes, IE7 and below 
+@media screen and (min-width: 60em) {
+	.ie .message textarea {
+	  *width: 49.9%;
+	}
+	.ie .send {
+		*margin-left: 46.7%;
+	}
+}
