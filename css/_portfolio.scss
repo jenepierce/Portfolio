@@ -1,14 +1,13 @@
 /* Portfolio & Resume Styles, _portfolio.scss */
-#portfolio, #resume{
-	padding-bottom: $emlineheight;
-	article{
-		@include borderbox;	
-	}
+#portfolio article, #resume article{
+	@include borderbox;	
 }
 #portfolio img{
 	border: 1px solid #eee;
 }
+#portfolio article{ padding-bottom: $emlineheight; }
 #resume {
+	padding-bottom: $emlineheight;
 	article ul{
 		padding-left: $emfontsize*2;
 	}

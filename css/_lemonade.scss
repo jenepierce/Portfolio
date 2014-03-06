@@ -1,0 +1,114 @@
+/*
+*
+* Lemonade v1.1
+* Copyright 2013, Joe Richardson
+* lemonade.im
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*
+*/
+/*
+* Lemonade Sass v1.1
+* Using Sass to dynamically create a lemonade grid
+* Now mobile first!
+*/
+
+// Padding between blocks, default lemonade grid: 0.3em
+// At 0, some spacing issues may occur in odd numbered columns 
+// Number of columns in grid
+$cols: 12;
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Set the width of the grid */
+.frame {
+  margin: 0 auto;
+}
+
+/* Attribute selector */
+[class*='bit-'] {
+  float: left;
+  position: relative;
+}
+
+/* Floats last ".bit-" to the right */
+[class*='bit-']:last-child {
+  float: right;
+}
+
+/* Clearfix */
+.frame:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Landscape mobile & down
+[class*='bit-'] {
+  width: 100%;
+}
+
+// Portrait tablet to landscape 
+@media (min-width: 30em) and (max-width: 48em) {
+	@for $i from 2 through $cols {
+	
+		// Odd Number or 2 = 100%
+		@if $i % 2 != 0 or $i == 2 { 
+			.bit-#{$i} { width: 100%; }
+			
+		// Even Number = 50%
+		} @else { 
+			.bit-#{$i} { width: 50%; }
+		}
+		
+	}
+}
+
+// Landscape to small desktop 
+@media (min-width: 48em) and (max-width: 68.750em) {
+
+	// Everything below 3 works as expected
+	@for $i from 2 through $cols {
+	
+		// Divisible by 6 (i.e. 12, 6)
+		@if $i % 6 == 0 { 
+			.bit-#{$i} { width: (100%/6); }
+			
+		// Divisible by 5 (i.e. 10, 5)
+		} @else if $i % 5 == 0 { 
+			.bit-#{$i} { width: 20%; }
+		
+		// Divisible by 3 (i.e. 9)	
+		} @else if $i % 3 == 0 {
+			.bit-#{$i} { width: (100%/3); }
+		
+		// Divisible by 2 (i.e. 8, 4)
+		} @else if $i % 2 == 0 {
+			.bit-#{$i} { width: 50%; }
+		}	
+			
+	}
+}
+
+// Large Desktop or TV - Main Widths
+@media (min-width: 68.750em) {
+	@for $i from 1 through $cols {
+	  .bit-#{$i}{
+		  width: (100%/$i);
+	  }
+	}
+}
+
+@media (min-width: 48em) {
+	.bit-2-3{
+		width: (100%/3)*2;
+	}
+}

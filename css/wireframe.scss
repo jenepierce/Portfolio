@@ -77,17 +77,17 @@ a{
 		border-bottom-color: $gold;
 	}
 }
+figure a{ border: none; }
 img{
 	max-width: 100%;
 }
-
-#nav, #masthead, #content, #colophone{
-	margin: 0 3%;
+ul.padding{
+	padding-left: $emfontsize*2;
 }
-@media screen and (min-width: 768px){
-	#nav, #masthead, #content, #colophone{
-		margin: 0 5%;
-	}
+@media (min-width: 60em) {
+	body{
+		margin: 0 8%;
+	} 
 }
 
 // Headers
@@ -121,15 +121,47 @@ h5{
 	}
 }
 
-@import "_lemonade";
-@import "_nav";
-@import "_header";
-@import "_portfolio";
-@import "_footer";
-
-.tinytext{ // 11px recommended 
-	font-size: em(11px);
-	line-height: lineheight(1,11px);
+.floatleft{
+	float: left;
+	margin: 0 $emfontsize $emlineheight 0;
+	max-width: 100%;
 }
-@import "_print";
+.floatright{
+	float: right;
+	margin: 0 0 $emlineheight $emfontsize; 
+	max-width: 100%;
+}
+
+// Light/Dark Switch
+.dark{
+	background: $purple;
+	color: #eee;
+	a{
+		color: $blue;
+		border-bottom-color: $blue;
+		&:hover{
+			color: $gold;
+			border-bottom-color: $gold;
+		}
+	}
+}
+
+.frame{
+	padding-top: $emlineheight;
+	padding-bottom: $emlineheight;
+	padding-left: $emfontsize;
+	padding-right: $emfontsize;
+}
+[class*='bit-'] {
+	padding-right: $emfontsize*2;
+	padding-bottom: $emlineheight;
+}
+[class*='bit-']:last-child{
+	padding-right: 0;
+}
+@import "_lemonade";
 @import "_iefix";
+
+.nopadding{
+	padding: 0;
+}
