@@ -232,7 +232,7 @@ h5 {
 /* Attribute selector */
 [class*='bit-'] {
   float: left;
-  padding: 0 0.875em 1.5em; }
+  position: relative; }
 
 /* Floats last ".bit-" to the right */
 [class*='bit-']:last-child {
@@ -281,6 +281,9 @@ h5 {
   .bit-12 {
     width: 50%; } }
 @media (min-width: 48em) and (max-width: 68.75em) {
+  .bit-2 {
+    width: 50%; }
+
   .bit-3 {
     width: 33.33333%; }
 
@@ -340,6 +343,9 @@ h5 {
 
   .bit-12 {
     width: 8.33333%; } }
+@media (min-width: 48em) {
+  .bit-2-3 {
+    width: 66.66667%; } }
 /* Nav Styles, _nav.scss */
 #nav {
   padding: 0.75em 0;
