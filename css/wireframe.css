@@ -172,7 +172,7 @@ img {
 ul.padding {
   padding-left: 1.75em; }
 
-@media (min-width: 60em) {
+@media (min-width: 80em) {
   body {
     margin: 0 8%; } }
 h1, h2, h3 {
@@ -204,6 +204,9 @@ h5 {
     color: #666;
     display: block; }
 
+form ul {
+  list-style: none; }
+
 .floatleft {
   float: left;
   margin: 0 0.875em 1.5em 0;
@@ -233,9 +236,6 @@ h5 {
 [class*='bit-'] {
   padding-right: 1.75em;
   padding-bottom: 1.5em; }
-
-[class*='bit-']:last-child {
-  padding-right: 0; }
 
 /*
 *
