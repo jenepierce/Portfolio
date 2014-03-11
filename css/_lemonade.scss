@@ -17,6 +17,9 @@
 // At 0, some spacing issues may occur in odd numbered columns 
 // Number of columns in grid
 $cols: 12;
+$tablet_p: 30em;
+$tablet_l: 48em;
+$desktop_s: 68.750em;
 
 *,
 *:after,
@@ -31,6 +34,7 @@ $cols: 12;
 /* Set the width of the grid */
 .frame {
   margin: 0 auto;
+  position: relative;
 }
 
 /* Attribute selector */
@@ -57,7 +61,7 @@ $cols: 12;
 }
 
 // Portrait tablet to landscape 
-@media (min-width: 30em) and (max-width: 48em) {
+@media (min-width: $tablet_p) and (max-width: $tablet_l) {
 	@for $i from 2 through $cols {
 	
 		// Odd Number or 2 = 100%
@@ -73,7 +77,7 @@ $cols: 12;
 }
 
 // Landscape to small desktop 
-@media (min-width: 48em) and (max-width: 68.750em) {
+@media (min-width: $tablet_l) and (max-width: $desktop_s) {
 
 	// Everything below 3 works as expected
 	@for $i from 2 through $cols {
@@ -99,7 +103,7 @@ $cols: 12;
 }
 
 // Large Desktop or TV - Main Widths
-@media (min-width: 68.750em) {
+@media (min-width: $desktop_s) {
 	@for $i from 1 through $cols {
 	  .bit-#{$i}{
 		  width: (100%/$i);
@@ -107,7 +111,7 @@ $cols: 12;
 	}
 }
 
-@media (min-width: 48em) {
+@media (min-width: $tablet_l) {
 	.bit-2-3{
 		width: (100%/3)*2;
 	}

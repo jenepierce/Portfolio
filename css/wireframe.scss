@@ -1,6 +1,7 @@
 // Normalize and Fixes
 @import "_normalize";
 @import "_clearfix";
+@import "_lemonade";
 
 // Font Imports
 @import url(http://fonts.googleapis.com/css?family=Dosis:300);
@@ -35,7 +36,30 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+@mixin boxshadow($x, $y, $blur, $color){
+	-moz-box-shadow:$x $y $blur $color;
+	-webkit-box-shadow: $x $y $blur $color;
+	box-shadow:$x $y $blur $color;
+}
+@mixin transition($this: all, $sec: 0.30s, $ease: ease){
+	-webkit-transition: $this $sec $ease;
+  -moz-transition: $this $sec $ease;
+  -ms-transition: $this $sec $ease;
+  -o-transition: $this $sec $ease;
+	transition: $this $sec $ease;
+}
+@mixin gradient($col1, $col2){
+	// Ultimate CSS Gradient Generator http://www.colorzilla.com/gradient-editor/
+	background: $col1; // Old browsers 
+	background: -moz-linear-gradient(top, $col1 0%, $col2 100%); // FF3.6+ 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$col1), color-stop(100%,$col2)); // Chrome,Safari4+ 
+	background: -webkit-linear-gradient(top, $col1 0%,$col2 100%); // Chrome10+,Safari5.1+ 
+	background: -o-linear-gradient(top, $col1 0%,$col2 100%); // Opera 11.10+ 
+	background: -ms-linear-gradient(top, $col1 0%,$col2 100%); // IE10+ 
+	background: linear-gradient(to bottom, $col1 0%,$col2 100%); // W3C 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col1', endColorstr='$col2',GradientType=0 ); // IE6-9 
+}
+	
 // Colors 
 $purple: #352a38;
 $yellow: #ffe147;
@@ -84,11 +108,6 @@ img{
 ul.padding{
 	padding-left: $emfontsize*2;
 }
-@media (min-width: 80em) {
-	body{
-		margin: 0 8%;
-	} 
-}
 
 // Headers
 h1, h2, h3{
@@ -121,12 +140,93 @@ h5{
 	}
 }
 
+// Nav
+.masthead nav.h-nav{
+	ul{
+		list-style: none;
+	}
+	li{
+		float: left;
+	}
+	a{
+		display: block;
+		padding: $emlineheight/2 $emfontsize;
+		margin-right: 1px;
+	}
+}
+@media (min-width: $tablet_p) {
+	.masthead nav.h-nav{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		ul{
+			float: right;
+			padding-bottom: 0;
+		}
+		a{
+			&:hover{
+				background-color: rgba(255,255,255,.2);
+			}
+		}
+	}
+}
+
+// Page stuff
+.work-mobile, .work-photos, .work-photos img, .portfolio{
+	padding-bottom: $emlineheight;
+}
+
+// Workspace Background
+@media (min-width: $tablet_l){
+	.workspace{
+		background: url("http://placehold.it/1200x250") top center no-repeat;
+		background-size: cover;
+		height: $emlineheight*10;
+		margin-bottom: $emlineheight;
+	}
+}
+
+// Form stuff
 form{
 	ul{
 		list-style: none;
 	}
+	li{
+		margin-bottom: $emlineheight/2;
+		&:last-child{ margin-bottom: 0; }
+	}
+}
+input[type="text"], textarea{ 
+	display: block;
+	padding: $emlineheight/2 $emfontsize;
+	width: 100%;
+	@include transition(box-shadow, .25s, ease);
+	&:focus{
+		outline: none;
+		border-color: $gold;
+		@include boxshadow(0,0,5px,$gold);
+	}
+}
+input[type="submit"], button{
+	display: block;
+	font-size: $emfontsize*1.5;
+	padding: $emlineheight/2.5 $emfontsize/2.5; 
+	width: 100%;
+	font-weight: bold;
+	color: #FFF;
+	border: 1px solid $gold;
+	@include gradient(lighten($gold,15%), $gold);
+	&:hover{
+		border-color: lighten($blue,10%);
+		@include gradient($blue, lighten($blue,10%));
+	}
 }
 
+textarea{
+	height: $emlineheight*7.75;
+}
+
+// Generic classes
 .floatleft{
 	float: left;
 	margin: 0 $emfontsize $emlineheight 0;
@@ -154,15 +254,21 @@ form{
 
 .frame{
 	padding-top: $emlineheight;
-	padding-bottom: $emlineheight;
 	padding-left: $emfontsize;
 	padding-right: $emfontsize;
 }
 [class*='bit-'] {
 	padding-right: $emfontsize*2;
-	padding-bottom: $emlineheight;
 }
-@import "_lemonade";
+@media (min-width: $desktop_s) {
+	.frame{
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+	.masthead nav.h-nav {
+		padding-right: 11%;
+	}
+}
 @import "_iefix";
 
 .nopadding{

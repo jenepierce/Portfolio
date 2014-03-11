@@ -39,12 +39,16 @@
 
 	</head>
 	<body lang="en">
-		<div class="container-masthead frame dark">
-			<header class="bit-2-3">
+		<div class="masthead frame dark">
+			<header class="bit-2">
 				<h1>Jen Pierce</h1>
 				<h2>Tag line here!</h2>
 			</header>
-			<nav class="bit-3">
+			<!--
+<input type="checkbox" id="toggle" />
+			<label for="toggle" onclick>Menu</label>
+-->
+			<nav class="bit-2 h-nav">
 				<ul>
 					<li><a href="#">Resume</a></li>
 					<li><a href="#">Portfolio</a></li>
@@ -55,36 +59,40 @@
 		</div>
 		
 		<article class="contact frame">
-			<img src="http://placehold.it/1200x300" alt="My Workspace" />
-			<div class="bit-3">
+			<div class="workspace"></div>
+			<div class="bit-2">
 				<h3>Contact</h3>
 				<p>(315) XXX-XXXX<br />
 					<a href="mailto:jenepierce@gmail.com">jenepierce@gmail.com</a><br />
 					Beaverton, OR
 				</p>
-			</div>
-			<div class="bit-2-3">
+				
 				<form action="" method="post">
 					<fieldset>
-						<legend>Contact Form</legend>
+						<legend></legend>
 						<ul>
 							<li>
-								<label>Your Name:</label>
-								<input type="text" />
+								<label for="name">Your Name:</label>
+								<input type="text" name="name" id="name" />
 							</li>
 							<li>
-								<label>Your Email:</label>
-								<input type="text" />
+								<label for="email">Your Email:</label>
+								<input type="text" name="email" id="email" />
 							</li>
 							<li>
-								<label>Message:</label>
-								<textarea></textarea>
+								<label for="message">Message:</label>
+								<textarea name="message" id="message"></textarea>
 							</li>
 						</ul>
-						<input type="submit"/>
+						<input type="submit" value="Send"/>
 					</fieldset>
 				</form>
 			</div>
+			<div class="bit-2">
+				<h3>About</h3>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				<img src="http://placehold.it/600x350" alt="Picture" />
 		</article>
 		
 		<article class="resume frame">
@@ -153,7 +161,7 @@
 		
 		<article class="work">
 		
-			<div class="work-desktop frame">
+			<section class="work-desktop frame">
 				<div class="bit-3">
 					<h3>Website Name</h3>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -163,9 +171,9 @@
 					<img src="http://placehold.it/768x500" alt="Alumni and Friends Desktop View"/>
 					<span class="caption">Desktop View</span>
 				</figure>
-			</div>
+			</section>
 			
-			<div class="work-mobile frame">
+			<section class="work-mobile frame">
 				<figure class="bit-2-3">
 					<img src="http://placehold.it/768x500" alt="Alumni and Friends Tablet View"/>
 					<span class="caption">Tablet and Mobile View</span>
@@ -175,54 +183,52 @@
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 				</div>
-			</div>
+			</section>
 			
-			<div class="work-photos frame dark">
-				<div class="bit-2">
+			<section class="work-photos frame dark">
+				<div class="bit-3">
 					<h4>Photos</h3>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 				</div>
-				<div class="bit-2 nopadding">
-					<figure><a href="#"><img class="bit-3" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
-					<figure><a href="#"><img class="bit-3" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
-					<figure><a href="#"><img class="bit-3" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
-					<figure><a href="#"><img class="bit-3" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
-					<figure><a href="#"><img class="bit-3" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
-					<figure><a href="#"><img class="bit-3" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
+				<div class="bit-2-3 nopadding">
+					<figure><a href="#"><img class="bit-4" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
+					<figure><a href="#"><img class="bit-4" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
+					<figure><a href="#"><img class="bit-4" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
+					<figure><a href="#"><img class="bit-4" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
+					<figure><a href="#"><img class="bit-4" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
+					<figure><a href="#"><img class="bit-4" src="http://placehold.it/200x120" alt="Picture" /></a></figure>
 				</div>
-			</div>
+			</section>
 			
 		</article>
 		
-		<div class="container-portfolio frame">
-			<article class="portfolio">
-				<h3>Portfolio</h3>
-				<figure class="bit-3">
-					<h4>Morrisville State College</h4>
-					<a href="#"><img src="http://placehold.it/320x200" alt="Morrisville State College Screenshot"/></a>
-				</figure>
-				<figure class="bit-3">
-					<h4>Alumni and Friends</h4>
-					<a href="#"><img src="http://placehold.it/320x200" alt="Alumni and Friends Screenshot"/></a>
-				</figure>
-				<figure class="bit-3">
-					<h4>Library</h4>
-					<a href="#"><img src="http://placehold.it/320x200" alt="Library Screenshot"/></a>
-				</figure>
-				<figure class="bit-3">
-					<h4>Equine Rehabilitation Center</h4>
-					<a href="#"><img src="http://placehold.it/320x200" alt="Equine Rehabilitation Center Screenshot"/></a>
-				</figure>
-				<figure class="bit-3">
-					<h4>Dining</h4>
-					<a href="#"><img src="http://placehold.it/320x200" alt="Dining Screenshot"/></a>
-				</figure>			
-				<figure class="bit-3">
-					<h4>Copper Turret Restaurant</h4>
-					<a href="#"><img src="http://placehold.it/320x200" alt="Copper Turret Restaurant Screenshot"/></a>
-				</figure>
-			</article>
-		</div>
+		<article class="portfolio frame">
+			<h3>Portfolio</h3>
+			<figure class="bit-3">
+				<h4>Morrisville State College</h4>
+				<a href="#"><img src="http://placehold.it/320x200" alt="Morrisville State College Screenshot"/></a>
+			</figure>
+			<figure class="bit-3">
+				<h4>Alumni and Friends</h4>
+				<a href="#"><img src="http://placehold.it/320x200" alt="Alumni and Friends Screenshot"/></a>
+			</figure>
+			<figure class="bit-3">
+				<h4>Library</h4>
+				<a href="#"><img src="http://placehold.it/320x200" alt="Library Screenshot"/></a>
+			</figure>
+			<figure class="bit-3">
+				<h4>Equine Rehabilitation Center</h4>
+				<a href="#"><img src="http://placehold.it/320x200" alt="Equine Rehabilitation Center Screenshot"/></a>
+			</figure>
+			<figure class="bit-3">
+				<h4>Dining</h4>
+				<a href="#"><img src="http://placehold.it/320x200" alt="Dining Screenshot"/></a>
+			</figure>			
+			<figure class="bit-3">
+				<h4>Copper Turret Restaurant</h4>
+				<a href="#"><img src="http://placehold.it/320x200" alt="Copper Turret Restaurant Screenshot"/></a>
+			</figure>
+		</article>
 		
 		<div id="container-footer" class="frame dark">
 			<footer>
@@ -231,7 +237,7 @@
 					<a href="#">jenepierce@gmail.com</a><br />
 					Portland, OR
 				</section>
-				<nav class="bit-2">
+				<nav class="bit-2 h-nav">
 					<ul>
 						<li><a href="#">CodePen</a></li>
 						<li><a href="#">Flickr</a></li>

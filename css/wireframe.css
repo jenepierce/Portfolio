@@ -230,100 +230,6 @@ samp {
   *zoom: 1;
   /* 3 */ }
 
-body {
-  font-family: 'Lato', Arial, sans-serif;
-  font-weight: 300;
-  font-size: 0.875em;
-  line-height: 1.5em; }
-
-p, ul, ol, dl {
-  padding-bottom: 1.5em; }
-
-table, blockquote {
-  margin-bottom: 1.5em; }
-
-a {
-  color: #886c8f;
-  text-decoration: none;
-  border-bottom: 1px solid #886c8f; }
-  a:hover {
-    color: #eab32c;
-    border-bottom-color: #eab32c; }
-
-figure a {
-  border: none; }
-
-img {
-  max-width: 100%; }
-
-ul.padding {
-  padding-left: 1.75em; }
-
-@media (min-width: 80em) {
-  body {
-    margin: 0 8%; } }
-h1, h2, h3 {
-  font-family: 'Dosis', Arial, sans-serif;
-  font-weight: 300; }
-
-h1 {
-  font-size: 2.64286em;
-  line-height: 1.13514em; }
-
-h2 {
-  display: block;
-  font-size: 1.64286em;
-  line-height: 1.82609em; }
-
-h3 {
-  color: #eab32c;
-  display: block;
-  font-size: 1.28571em;
-  line-height: 1.16667em; }
-
-h4, h5, h6 {
-  font-size: 1em;
-  font-weight: 400; }
-
-h5 {
-  color: #6db6df; }
-  h5 span {
-    color: #666;
-    display: block; }
-
-form ul {
-  list-style: none; }
-
-.floatleft {
-  float: left;
-  margin: 0 0.875em 1.5em 0;
-  max-width: 100%; }
-
-.floatright {
-  float: right;
-  margin: 0 0 1.5em 0.875em;
-  max-width: 100%; }
-
-.dark {
-  background: #352a38;
-  color: #eee; }
-  .dark a {
-    color: #97cbe8;
-    border-bottom-color: #97cbe8; }
-    .dark a:hover {
-      color: #eab32c;
-      border-bottom-color: #eab32c; }
-
-.frame {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  padding-left: 0.875em;
-  padding-right: 0.875em; }
-
-[class*='bit-'] {
-  padding-right: 1.75em;
-  padding-bottom: 1.5em; }
-
 /*
 *
 * Lemonade v1.1
@@ -349,7 +255,8 @@ form ul {
 
 /* Set the width of the grid */
 .frame {
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 /* Attribute selector */
 [class*='bit-'] {
@@ -468,6 +375,180 @@ form ul {
 @media (min-width: 48em) {
   .bit-2-3 {
     width: 66.66667%; } }
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.875em;
+  line-height: 1.5em; }
+
+p, ul, ol, dl {
+  padding-bottom: 1.5em; }
+
+table, blockquote {
+  margin-bottom: 1.5em; }
+
+a {
+  color: #886c8f;
+  text-decoration: none;
+  border-bottom: 1px solid #886c8f; }
+  a:hover {
+    color: #eab32c;
+    border-bottom-color: #eab32c; }
+
+figure a {
+  border: none; }
+
+img {
+  max-width: 100%; }
+
+ul.padding {
+  padding-left: 1.75em; }
+
+h1, h2, h3 {
+  font-family: 'Dosis', Arial, sans-serif;
+  font-weight: 300; }
+
+h1 {
+  font-size: 2.64286em;
+  line-height: 1.13514em; }
+
+h2 {
+  display: block;
+  font-size: 1.64286em;
+  line-height: 1.82609em; }
+
+h3 {
+  color: #eab32c;
+  display: block;
+  font-size: 1.28571em;
+  line-height: 1.16667em; }
+
+h4, h5, h6 {
+  font-size: 1em;
+  font-weight: 400; }
+
+h5 {
+  color: #6db6df; }
+  h5 span {
+    color: #666;
+    display: block; }
+
+.masthead nav.h-nav ul {
+  list-style: none; }
+.masthead nav.h-nav li {
+  float: left; }
+.masthead nav.h-nav a {
+  display: block;
+  padding: 0.75em 0.875em;
+  margin-right: 1px; }
+
+@media (min-width: 30em) {
+  .masthead nav.h-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .masthead nav.h-nav ul {
+      float: right;
+      padding-bottom: 0; }
+    .masthead nav.h-nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2); } }
+.work-mobile, .work-photos, .work-photos img, .portfolio {
+  padding-bottom: 1.5em; }
+
+@media (min-width: 48em) {
+  .workspace {
+    background: url("http://placehold.it/1200x250") top center no-repeat;
+    background-size: cover;
+    height: 15em;
+    margin-bottom: 1.5em; } }
+form ul {
+  list-style: none; }
+form li {
+  margin-bottom: 0.75em; }
+  form li:last-child {
+    margin-bottom: 0; }
+
+input[type="text"], textarea {
+  display: block;
+  padding: 0.75em 0.875em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.25s ease;
+  -moz-transition: box-shadow 0.25s ease;
+  -ms-transition: box-shadow 0.25s ease;
+  -o-transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease; }
+  input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #eab32c;
+    -moz-box-shadow: 0 0 5px #eab32c;
+    -webkit-box-shadow: 0 0 5px #eab32c;
+    box-shadow: 0 0 5px #eab32c; }
+
+input[type="submit"], button {
+  display: block;
+  font-size: 1.3125em;
+  padding: 0.6em 0.35em;
+  width: 100%;
+  font-weight: bold;
+  color: #FFF;
+  border: 1px solid #eab32c;
+  background: #f1cc72;
+  background: -moz-linear-gradient(top, #f1cc72 0%, #eab32c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1cc72), color-stop(100%, #eab32c));
+  background: -webkit-linear-gradient(top, #f1cc72 0%, #eab32c 100%);
+  background: -o-linear-gradient(top, #f1cc72 0%, #eab32c 100%);
+  background: -ms-linear-gradient(top, #f1cc72 0%, #eab32c 100%);
+  background: linear-gradient(to bottom, #f1cc72 0%, #eab32c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$col1', endColorstr='$col2',GradientType=0 ); }
+  input[type="submit"]:hover, button:hover {
+    border-color: #c1e0f1;
+    background: #97cbe8;
+    background: -moz-linear-gradient(top, #97cbe8 0%, #c1e0f1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #97cbe8), color-stop(100%, #c1e0f1));
+    background: -webkit-linear-gradient(top, #97cbe8 0%, #c1e0f1 100%);
+    background: -o-linear-gradient(top, #97cbe8 0%, #c1e0f1 100%);
+    background: -ms-linear-gradient(top, #97cbe8 0%, #c1e0f1 100%);
+    background: linear-gradient(to bottom, #97cbe8 0%, #c1e0f1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$col1', endColorstr='$col2',GradientType=0 ); }
+
+textarea {
+  height: 11.625em; }
+
+.floatleft {
+  float: left;
+  margin: 0 0.875em 1.5em 0;
+  max-width: 100%; }
+
+.floatright {
+  float: right;
+  margin: 0 0 1.5em 0.875em;
+  max-width: 100%; }
+
+.dark {
+  background: #352a38;
+  color: #eee; }
+  .dark a {
+    color: #97cbe8;
+    border-bottom-color: #97cbe8; }
+    .dark a:hover {
+      color: #eab32c;
+      border-bottom-color: #eab32c; }
+
+.frame {
+  padding-top: 1.5em;
+  padding-left: 0.875em;
+  padding-right: 0.875em; }
+
+[class*='bit-'] {
+  padding-right: 1.75em; }
+
+@media (min-width: 68.75em) {
+  .frame {
+    padding-left: 8%;
+    padding-right: 8%; }
+
+  .masthead nav.h-nav {
+    padding-right: 11%; } }
 /* IE Fixes, _iefix.scss */
 .ie .name,
 .ie .email,
