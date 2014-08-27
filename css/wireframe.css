@@ -193,6 +193,8 @@ code, kbd, pre, samp {
 [class*='bit-'] {
   float: left;
   position: relative; }
+  .reverse [class*='bit-'] {
+    float: right; }
 
 /* Floats last ".bit-" to the right */
 [class*='bit-']:last-child {

@@ -254,6 +254,8 @@ h5 {
 [class*='bit-'] {
   float: left;
   position: relative; }
+  .reverse [class*='bit-'] {
+    float: right; }
 
 /* Floats last ".bit-" to the right */
 [class*='bit-']:last-child {
@@ -465,9 +467,18 @@ body {
 
 #portfolio img {
   border: 1px solid #eee; }
-
 #portfolio article {
   padding-bottom: 1.5em; }
+#portfolio.detailed-portfolio img {
+  border-width: 1em; }
+#portfolio.detailed-portfolio article {
+  padding-bottom: 3em; }
+
+.work-text {
+  padding-right: 1.5em; }
+  .reverse .work-text {
+    padding-right: 0;
+    padding-left: 1em; }
 
 #resume {
   padding-bottom: 1.5em; }
@@ -477,9 +488,6 @@ body {
 @media screen and (min-width: 768px) {
   #portfolio article, #resume article {
     padding-right: 1.75em; }
-  #portfolio article {
-    float: left;
-    width: 33.333%; }
   #resume article.experience {
     float: left;
     clear: left;

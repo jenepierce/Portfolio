@@ -2,11 +2,30 @@
 #portfolio article, #resume article{
 	@include borderbox;	
 }
-#portfolio img{
-	border: 1px solid #eee;
+#portfolio{
+	img{
+		border: 1px solid #eee;
+	}
+	article{ 
+		padding-bottom: $emlineheight; 
+	}
+	&.detailed-portfolio{
+		img {
+			border-width: 1em;
+		}
+		article{
+			padding-bottom: $emlineheight*2;
+		}
+	}
 }
-#portfolio article{ padding-bottom: $emlineheight; }
-#resume {
+.work-text{
+	padding-right: 1.5em;
+	.reverse & {
+		padding-right: 0;
+		padding-left: 1em;
+	}
+}
+#resume{
 	padding-bottom: $emlineheight;
 	article ul{
 		padding-left: $emfontsize*2;
@@ -15,11 +34,6 @@
 @media screen and (min-width: 768px){
 	#portfolio article, #resume article{
 		padding-right: $emfontsize*2;
-	}
-	// Portfolio thumbnails 1/3
-	#portfolio article{
-		float: left;
-		width: 33.333%;
 	}
 	// Experience & Education 2/3 on left, Skills 1/3 on right
 	#resume article{
