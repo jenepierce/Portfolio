@@ -480,11 +480,13 @@ body {
   #portfolio article {
     float: left;
     width: 33.333%; }
-  #resume article.experience, #resume article.education {
+  #resume article.experience {
     float: left;
+    clear: left;
     width: 66.666%; }
-  #resume article.skills {
+  #resume article.skills, #resume article.education {
     float: right;
+    clear: right;
     width: 33.333%; } }
 
 /* Footer and Form Styles, _footer.scss */
