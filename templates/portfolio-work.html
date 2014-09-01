@@ -1,0 +1,16 @@
+<section id="portfolio" class="group">		
+	<header>
+		<h3>Portfolio</h3>
+	</header>
+	<article class="bit-3" ng-repeat="work in portfolio.work">
+		<h4>{{work.name}}</h4>
+		<span picture-fill data-alt="{{work.name}}" ng-if="work.images.length">
+		  <span pf-src="{{work.images[0]}}"></span>
+		  <span pf-src="{{work.images[1]}}" data-media="(min-width: 480px) and (max-width: 768px)"></span>
+		  <span pf-src="{{work.images[2]}}" data-media="(min-width: 1400px)"></span>
+		  <noscript>
+      	<img ng-src="{{work.images[0]}}" ng-alt="{{work.name}}">
+		  </noscript>
+		</span>
+	</article>
+</section>

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Alumni & Friends",
+    "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+    "order": 0,
+    "images": [
+      "/img/AlumniAndFriends-s.jpg",
+      "/img/AlumniAndFriends-m.jpg",
+      "/img/AlumniAndFriends-l.jpg"
+    ]
+  },
+  {
+    "name": "Morrisville State College",
+    "description": "Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
+    "order": 1,
+    "images": [
+      "/img/Morrisville-s.jpg",
+      "/img/Morrisville-m.jpg",
+      "/img/Morrisville-l.jpg"
+    ]
+  },
+  {
+    "name": "Equine Rehabilitation Center",
+    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "order": 2,
+    "images": [
+      "/img/EquineRehab-s.jpg",
+      "/img/EquineRehab-m.jpg",
+      "/img/EquineRehab-l.jpg"
+    ]
+  },
+  {
+    "name": "IcePlex",
+    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "order": 3,
+    "images": [
+      "/img/IcePlex-s.jpg",
+      "/img/IcePlex-m.jpg",
+      "/img/IcePlex-l.jpg"
+    ]
+  },
+  {
+    "name": "Copper Turret Restaurant",
+    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "order": 4,
+    "images": [
+      "/img/CopperTurret-s.jpg",
+      "/img/CopperTurret-m.jpg",
+      "/img/CopperTurret-l.jpg"
+    ]
+  },
+  {
+    "name": "Dining @ MSC",
+    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "order": 5,
+    "images": [
+      "/img/Dining-s.jpg",
+      "/img/Dining-m.jpg",
+      "/img/Dining-l.jpg"
+    ]
+  }
+]
