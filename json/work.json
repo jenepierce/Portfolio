@@ -1,62 +1,68 @@
 [
   {
     "name": "Alumni & Friends",
-    "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+    "description": "<p>New Morrisville State College websites have their own unique look while using the main Morrisville State College design as a template. Alumni & Friends was given a slight archival feel by using paper textures, photo frames, and off-white colors. Brand consistency is achieved by using the same logo, navigation placement, footer, slanting header design, and overall color palette as the Morrisville State College site.</p><p>The number of users visiting our sites on mobile devices has increased exponentially over the last few years. The Alumni & Friends design is responsive, meaning the website content adapts beautifully to any screen size.</p><p><a href='http://www.casetwo.org/services_and_programs/awards/accolades_awards_program/accolades_award_winners/2014_accolades_award_winners.html'>CASE 2014 First Place Winner in Alumni Category</a></p>",
+    "url": "http://alumni.morrisville.edu",
     "order": 0,
     "images": [
-      "/img/AlumniAndFriends-s.jpg",
-      "/img/AlumniAndFriends-m.jpg",
-      "/img/AlumniAndFriends-l.jpg"
+      "img/AlumniAndFriends-s.jpg",
+      "img/AlumniAndFriends-m.jpg",
+      "img/AlumniAndFriends-l.jpg"
     ]
   },
   {
     "name": "Morrisville State College",
-    "description": "Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
+    "description": "<p>The new Morrisville State College campaign \"in motion\", as well as the alumni magazine \"Momentum\", were launched in late 2011. In order to keep the site and print material consistent, the Morrisville State College website required a redesign.Lead the design and development of the site in a team environment. Worked closely the Morrisville State College graphic designer and PR department for brand consistency.</p>",
+    "url": "http://www.morrisville.edu",
     "order": 1,
     "images": [
-      "/img/Morrisville-s.jpg",
-      "/img/Morrisville-m.jpg",
-      "/img/Morrisville-l.jpg"
+      "img/Morrisville-s.jpg",
+      "img/Morrisville-m.jpg",
+      "img/Morrisville-l.jpg"
     ]
   },
   {
     "name": "Equine Rehabilitation Center",
-    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "description": "<p>The MSC Equine Rehabilitation Center (ERC) required a new site to promote their services to horse owners, veterinarians, and prospective MSC students. Because of the high number of users with mobile devices (specifically potential students), I made sure the ERC website is responsive. The layout will conform to any screen size available.</p>",
+    "url": "http://equinerehab.morrisville.edu",
     "order": 2,
     "images": [
-      "/img/EquineRehab-s.jpg",
-      "/img/EquineRehab-m.jpg",
-      "/img/EquineRehab-l.jpg"
+      "img/EquineRehab-s.jpg",
+      "img/EquineRehab-m.jpg",
+      "img/EquineRehab-l.jpg"
     ]
   },
   {
     "name": "IcePlex",
-    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "description": "<p>The IcePlex houses is home to the Morrisville Mustangs hockey team, and hosts several hockey, figure skating, and speed skating camps and clinics. The director wanted a new look as well as the ability to update site information as needed.</p><p>Designed and developed the new site and content management system. The director and assistant can update camps, clinics, flyers, coach information, calendar events, and more as needed. Traffic and interest in the IcePlex increased as a direct result of the redesign.</p>",
+    "url": "http://iceplex.morrisville.edu",
     "order": 3,
     "images": [
-      "/img/IcePlex-s.jpg",
-      "/img/IcePlex-m.jpg",
-      "/img/IcePlex-l.jpg"
+      "img/IcePlex-s.jpg",
+      "img/IcePlex-m.jpg",
+      "img/IcePlex-l.jpg"
     ]
   },
   {
     "name": "Copper Turret Restaurant",
-    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "description": "<p>The Copper Turret restaurant is run by both Morrisville Auxiliary Corporation employees and Morrisville State College students in the Food and Hospitality majors.</p><p>Designed and built the site as a promotional and informational piece for the community as a whole. Created a custom content management system so the directors can update the menus, events, and hours frequently.</p>",
+    "url": "http://www.copperturret.com",
     "order": 4,
     "images": [
-      "/img/CopperTurret-s.jpg",
-      "/img/CopperTurret-m.jpg",
-      "/img/CopperTurret-l.jpg"
+      "img/CopperTurret-s.jpg",
+      "img/CopperTurret-m.jpg",
+      "img/CopperTurret-l.jpg"
     ]
   },
   {
     "name": "Dining @ MSC",
-    "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+    "description": "<p>Morrisville Auxiliary Corporation (MAC) owns and operates all dining services on the Morrisville State College campus. MAC directors were interested in showcasing Morrisville's dining services by creating a unique web identity.</p><p>Designed and developed the site with the current Morrisville brand in mind, working closely with the Morrisville State College graphic designer. Created a CMS system for menus, hours, and other information as needed. The site is designed to work on multiple mobile devices by responding to screen size.</p>",
+    "url": "http://dining.morrisville.edu",
     "order": 5,
     "images": [
-      "/img/Dining-s.jpg",
-      "/img/Dining-m.jpg",
-      "/img/Dining-l.jpg"
+      "img/Dining-s.jpg",
+      "img/Dining-m.jpg",
+      "img/Dining-l.jpg"
     ]
   }
 ]
