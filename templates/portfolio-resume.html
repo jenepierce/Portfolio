@@ -6,10 +6,58 @@
 	<article class="experience">
 		<h4>Work Experience</h4>
 		<h5>UI Engineer, Umpqua Bank, <span>Hillsboro, OR: March 2014 - September 2014 (6 month contract)</span></h5>
-		<p>Responsible for architecting, designing, developing and testing a highly scalable, customer facing, critical Internet Banking and Mobile application with minimal direction with a large UI team. Designed and developed mobile and web-based UI interfaces using HTML5, CSS3 (Sass), and Ember JavaScript framework under an Agile development cycle.</p>
+		
+		<span ng-hide="resumeDetails.show">
+			<p>Responsible for architecting, designing, developing and testing a highly scalable, customer facing, critical Internet Banking and Mobile application with minimal direction with a large UI team. Designed and developed mobile and web-based UI interfaces using HTML5, CSS3 (Sass), and Ember JavaScript framework under an Agile development cycle.</p>
+		</span>		
+		<span ng-show="resumeDetails.show">
+			<ul>
+				<li>Responsible for architecting, designing, developing and testing a highly scalable, customer facing, critical Internet Banking and Mobile application with minimal direction with a large UI team</li>
+				<li>Designed and developed mobile and web-based UI interfaces using HTML5, CSS3 (Sass), and Ember JavaScript framework</li>
+				<li>Completed CSS styling and layout of pages produced by development team while maintaining browser and device compatibility</li>
+				<li>Developed JavaScript to interact with industry standard libraries for rich client interactions on the desktop, mobile web and mobile hybrid app</li>
+				<li>Documented program development, logic, coding, and corrections using Stash and Git under an Agile development cycle</li>
+				<li>Worked collaboratively and consulted with QA engineers & 3rd Party engineers through participation in the testing process and review of QA documentation during the document planning and design stage</li>
+				<li>Followed and implemented accessibility compliance standards and bank regulation procedures</li>
+				<li>Coordinated with product strategies, project teams, IT cross functional groups as well as 3rd party vendors and affiliates</li>
+			</ul>
+		</span>		
+		
 		<h5>Web Designer & Developer, Morrisville State College, <span>Morrisville, NY: Dec. 2006 - Jan. 2014</span></h5>
-		<p>Responsible for design, development, and maintenance for Morrisville State College top-tier and affiliate websites. Built several websites from the ground up on a small, two person team, from the initial planning stages with clients to building the front-end (HTML, CSS3, and JavaScript) and back-end development.</p>
-		<p><a href="resume.html">Full resume &amp; work history</a></p>
+		<span ng-hide="resumeDetails.show">
+			<p>Responsible for design, development, and maintenance for Morrisville State College top-tier and affiliate websites. Built several websites from the ground up on a small, two person team, from the initial planning stages with clients to building the front-end (HTML, CSS3, and JavaScript) and back-end development.</p>
+		</span>
+		<span ng-show="resumeDetails.show">
+			<ul>
+				<li>Built several websites from the ground up on a small, two person team, from the initial planning stages with clients to building the front-end (HTML, CSS3, and JavaScript) and back-end development</li>
+				<li>Worked one-on-one with internal and external clients on their project objectives and requirements,  creating user diagrams and design boards to better understand the clients perspective</li>
+				<li>Created wireframes, design artifacts, navigation diagrams and design comps to communicate the design direction to the client in the initial design phase</li>
+				<li>Designed and developed responsive websites for both desktop and mobile devices by building custom CSS/Sass responsive grids, and used analytic data and BrowserStack to test across all major browsers and devices</li>
+				<li>Worked closely with clients on usability concerns, using Google Analytics to analyze user data and conduct A/B testing, created surveys and responded to feedback. </li>
+				<li>Worked with multiple departments to ensure project requirements were met and branding was cohesive between print and web mediums (Network and System Admin, Graphic Design, Social Media, Public Relations)</li>
+				<li>Responsible for design and maintenance of 20+ top-tier and affiliated MSC websites</li>
+			</ul>
+			<h6>Major Projects & Accomplishments:</h6>
+			<ul>
+				<li>Received first place <a href="http://www.casetwo.org/services_and_programs/awards/accolades_awards_program/accolades_award_winners.html">2014 CASE award</a> for the MSC alumni website, a mobile-friendly responsive site built off of the Bootstrap framework with a custom CSS/LESS layout</li>
+				<li>Designed and built the soon to launch MSC library website, a mobile-friendly responsive site with a minimalist responsive grid, a custom CSS/Sass layout, and jQuery/AJAX elements</li>
+				<li>Lead a small team as project manager in the redesign of the Morrisville State College website</li>
+				<li>Volunteered for college events and worked with multiple committees, becoming a member of the emergency communication response team and Chair of the Web Advisory Group</li>
+				<li>Promoted in 2009, added responsibility for all Morrisville State College websites and affiliates</li>
+				<li>Examples of work can be found at <a href="http://www.jenpierce.com">jenpierce.com</a></li>
+			</ul>
+			<h6>Secondary Responsibilities:</h6>
+			<ul>
+				<li>Designed and developed email templates for MailChimp and Fire Engine Red</li>
+				<li>Worked on Social Media policies and assisted with social media accounts such as Facebook, Twitter and Instagram</li>
+				<li>Researched, interfaced with and provided training for third-party web services such as Survey Monkey, MailChimp and Fire Engine Red</li>
+				<li>Present major design and policy changes to college wide faculty and staff meetings</li>
+				<li>Chair (5 years) of the Web Advisory Group, a committee of 10+ members from several departments, to discuss design changes and possible usability concerns through discussion and cognitive walkthroughs</li>
+			</ul>
+		</span>		
+		
+		
+		<p><a href ng-click="resumeDetails.showDetails()">{{resumeDetails.showText}} full work summary</a></p>
 	</article>
 
 	<article class="skills">

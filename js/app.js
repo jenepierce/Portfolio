@@ -26,7 +26,16 @@
 	app.directive('portfolioResume', function(){
 		return {
 			restrict: 'E', 
-			templateUrl: 'templates/portfolio-resume.html'
+			templateUrl: 'templates/portfolio-resume.html',
+			controller: function() {
+				this.show = false;
+				this.showText = 'Show';
+				this.showDetails = function() {
+					this.show = !this.show;
+					this.showText = this.show ? 'Hide' : 'Show';
+				}
+			},
+			controllerAs: 'resumeDetails'
 		};
 	});
 	
