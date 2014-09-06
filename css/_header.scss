@@ -1,7 +1,12 @@
 /* Header Styles, _header.scss */
 #masthead{
 	color: $offwhite;
-	text-shadow:2px 2px 0px rgba(0,0,0,.5);
+	text-shadow:1px 1px 0px rgba(0,0,0,.5), 2px 2px 0px rgba(0,0,0,.5);
+	h2{
+		background-color: transparentize($dkblue,.25);
+		display: inline-block;
+		padding: 0 .5em;
+	}
 }
 #container-header{
 	background: $purple; 
@@ -15,6 +20,7 @@
 	// Responsive background image for Header
 	// All swapped CSS background images must be in media queries to avoid downloading an image twice. Never put it in the default css
 	@media screen and (max-width: 480px){
+		font-size: .85em;
 		background-image: url("../img/YellowDudeFocus-s.jpg");
 	}
 	@media screen and (min-width: 481px) and (max-width: 886px){

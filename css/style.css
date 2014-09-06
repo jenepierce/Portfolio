@@ -452,7 +452,11 @@ body {
 /* Header Styles, _header.scss */
 #masthead {
   color: #eee;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5); }
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5), 2px 2px 0px rgba(0, 0, 0, 0.5); }
+  #masthead h2 {
+    background-color: rgba(56, 72, 81, 0.75);
+    display: inline-block;
+    padding: 0 0.5em; }
 
 #container-header {
   background: #352a38;
@@ -465,6 +469,7 @@ body {
   width: 100%; }
   @media screen and (max-width: 480px) {
     #container-header {
+      font-size: 0.85em;
       background-image: url("../img/YellowDudeFocus-s.jpg"); } }
   @media screen and (min-width: 481px) and (max-width: 886px) {
     #container-header {
