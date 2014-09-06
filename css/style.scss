@@ -121,6 +121,17 @@ h5{
 	}
 }
 
+// Forms
+button{
+	background-color: $dkblue;
+	border: none;
+	padding: .5em 1em;
+	color: $offwhite;
+	&:hover{
+		background-color: darken($blue,10%);
+	}
+}
+
 // Dark option
 .dark-background{
 	background: $purple;

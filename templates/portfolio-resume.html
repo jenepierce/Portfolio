@@ -12,10 +12,10 @@
 			<li>Designed and developed mobile and web-based UI interfaces using HTML5, CSS3 (Sass), and Ember JavaScript framework</li>
 			<li>Completed CSS styling and layout of pages produced by development team while maintaining browser and device compatibility</li>
 			<li>Developed JavaScript to interact with industry standard libraries for rich client interactions on the desktop, mobile web and mobile hybrid app</li>
-			<li ng-show="resumeDetails.show">Documented program development, logic, coding, and corrections using Stash and Git under an Agile development cycle</li>
-			<li ng-show="resumeDetails.show">Worked collaboratively and consulted with QA engineers & 3rd Party engineers through participation in the testing process and review of QA documentation during the document planning and design stage</li>
-			<li ng-show="resumeDetails.show">Followed and implemented accessibility compliance standards and bank regulation procedures</li>
-			<li ng-show="resumeDetails.show">Coordinated with product strategies, project teams, IT cross functional groups as well as 3rd party vendors and affiliates</li>
+			<li ng-show="resumeDetails.show || portfolio.phone">Documented program development, logic, coding, and corrections using Stash and Git under an Agile development cycle</li>
+			<li ng-show="resumeDetails.show || portfolio.phone">Worked collaboratively and consulted with QA engineers & 3rd Party engineers through participation in the testing process and review of QA documentation during the document planning and design stage</li>
+			<li ng-show="resumeDetails.show || portfolio.phone">Followed and implemented accessibility compliance standards and bank regulation procedures</li>
+			<li ng-show="resumeDetails.show || portfolio.phone">Coordinated with product strategies, project teams, IT cross functional groups as well as 3rd party vendors and affiliates</li>
 		</ul>
 		
 		<h5>Web Designer & Developer, Morrisville State College, <span>Morrisville, NY: Dec. 2006 - Jan. 2014</span></h5>
@@ -25,11 +25,11 @@
 			<li>Worked one-on-one with internal and external clients on their project objectives and requirements,  creating user diagrams and design boards to better understand the clients perspective</li>
 			<li>Created wireframes, design artifacts, navigation diagrams and design comps to communicate the design direction to the client in the initial design phase</li>
 			<li>Designed and developed responsive websites for both desktop and mobile devices by building custom CSS/Sass responsive grids, and used analytic data and BrowserStack to test across all major browsers and devices</li>
-			<li ng-show="resumeDetails.show">Worked closely with clients on usability concerns, using Google Analytics to analyze user data and conduct A/B testing, created surveys and responded to feedback. </li>
-			<li ng-show="resumeDetails.show">Worked with multiple departments to ensure project requirements were met and branding was cohesive between print and web mediums (Network and System Admin, Graphic Design, Social Media, Public Relations)</li>
-			<li ng-show="resumeDetails.show">Responsible for design and maintenance of 20+ top-tier and affiliated MSC websites</li>
+			<li ng-show="resumeDetails.show || portfolio.phone">Worked closely with clients on usability concerns, using Google Analytics to analyze user data and conduct A/B testing, created surveys and responded to feedback. </li>
+			<li ng-show="resumeDetails.show || portfolio.phone">Worked with multiple departments to ensure project requirements were met and branding was cohesive between print and web mediums (Network and System Admin, Graphic Design, Social Media, Public Relations)</li>
+			<li ng-show="resumeDetails.show || portfolio.phone">Responsible for design and maintenance of 20+ top-tier and affiliated MSC websites</li>
 		</ul>
-		<span ng-show="resumeDetails.show">
+		<span ng-show="resumeDetails.show || portfolio.phone">
 			<h6>Major Projects & Accomplishments:</h6>
 			<ul>
 				<li>Received first place <a href="http://www.casetwo.org/services_and_programs/awards/accolades_awards_program/accolades_award_winners.html">2014 CASE award</a> for the MSC alumni website, a mobile-friendly responsive site built off of the Bootstrap framework with a custom CSS/LESS layout</li>
@@ -49,8 +49,7 @@
 			</ul>
 		</span>
 		
-		
-		<p><a href ng-click="resumeDetails.showDetails()">{{resumeDetails.showText}} full work summary</a></p>
+		<button ng-hide="portfolio.phone" ng-click="resumeDetails.showDetails()">{{resumeDetails.showText}} full work summary</button>
 	</article>
 
 	<article class="skills">

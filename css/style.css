@@ -224,6 +224,14 @@ h5 {
     color: #666;
     display: block; }
 
+button {
+  background-color: #384851;
+  border: none;
+  padding: 0.5em 1em;
+  color: #eee; }
+  button:hover {
+    background-color: #6db7df; }
+
 .dark-background {
   background: #352a38;
   color: #eee; }
