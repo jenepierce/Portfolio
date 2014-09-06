@@ -4,7 +4,7 @@
 		<h3>Portfolio</h3>
 	</header>
 
-	<article class="bit-3 thumbnails" ng-repeat="work in portfolio.work" ng-class="{'active':select.isSelected($index), 'bit-6':select.detailsOpen}">
+	<article class="bit-3 thumbnails" ng-repeat="work in site.work" ng-class="{'active':select.isSelected($index), 'bit-6':select.detailsOpen}">
 		<h4>{{work.name}}</h4>
 		<span picture-fill data-alt="{{work.name}}" ng-if="work.images.length">
 		<a href ng-click="select.selectWork($index)">
@@ -16,20 +16,20 @@
 		  </noscript>
 		</a>
 		</span>
-		<div ng-if="portfolio.phone">
+		<div ng-if="site.phone">
 			<div ng-bind-html="work.description"></div>
 			<a ng-href="{{work.url}}">{{work.url}}</a>
 		</div>
 	</article>
 		
-	<article class="frame work-details" ng-if="select.detailsOpen && !portfolio.phone">
+	<article class="frame work-details" ng-if="select.detailsOpen && !site.phone">
 		<div class="bit-3 work-text">
-			<h3>{{portfolio.work[select.selectedWork].name}}</h3>
-			<div ng-bind-html="portfolio.work[select.selectedWork].description"></div>
-			<a ng-href="{{portfolio.work[select.selectedWork].url}}">{{portfolio.work[select.selectedWork].url}}</a>
+			<h3>{{site.work[select.selectedWork].name}}</h3>
+			<div ng-bind-html="site.work[select.selectedWork].description"></div>
+			<a ng-href="{{site.work[select.selectedWork].url}}">{{site.work[select.selectedWork].url}}</a>
 		</div>
 		<div class="bit-2-3">
-			<img ng-src="{{portfolio.work[select.selectedWork].images[2]}}" ng-alt="{{portfolio.work[select.selectedWork].name}}">
+			<img ng-src="{{site.work[select.selectedWork].images[2]}}" ng-alt="{{site.work[select.selectedWork].name}}">
 		</div>
 	</article>
 			
