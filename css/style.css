@@ -226,9 +226,11 @@ button {
   background-color: #384851;
   border: none;
   padding: 0.5em 1em;
-  color: #eee; }
+  color: #eee;
+  font-weight: 400; }
   button:hover {
-    background-color: #6db7df; }
+    background-color: #6db7df;
+    color: #FFF; }
 
 .dark-background {
   background: #352a38;
