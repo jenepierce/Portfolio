@@ -1,14 +1,9 @@
 (function(){
 	var app = angular.module('site',['ng.picturefill','ngSanitize','matchmedia-ng']);
 	
-	app.controller('SiteController', ['$http', 'matchmedia', function($http, matchmedia){
-    //Get the site data
+	app.controller('SiteController', ['matchmedia', function(matchmedia){
 		var site = this;
-    site.work = [];
-    $http.get('json/work.json').success(function(data){
-      site.work = data;
-    });
-    //Add more media properties here when needed
+		//Add more media properties here when needed
 		site.phone = matchmedia.isPhone();
 	}]);
 	
@@ -46,18 +41,32 @@
 		return {
 			restrict: 'E', 
 			templateUrl: 'templates/site-portfolio.html',
-			controller: function(){
-				this.selectedWork = -1;
+			controller: ['$http', function($http){
+				var portfolio = this;
+
+				// Get portfolio work
+				portfolio.work = [];
+		    $http.get('json/work.json').success(function(data){
+		      portfolio.work = data;
+		    });
+		    
+				// Set selected work
 				this.detailsOpen = false;
+				this.selectedWork = [];
+				this.workNum = -1;
 				this.selectWork = function(workNum){
-					this.selectedWork = workNum;
+					this.selectedWork = portfolio.work[workNum];
+					this.workNum = workNum;
 					this.detailsOpen = true;
 				};
+				
+				// Check if work is selected
 				this.isSelected = function(checkNum){
-					return this.selectedWork === checkNum;
+					return this.workNum === checkNum;
 				};
-			},
-			controllerAs: 'select'
+
+			}],
+			controllerAs: 'portfolio'
 		};
 	});
 })();
