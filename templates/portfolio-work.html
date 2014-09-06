@@ -16,9 +16,13 @@
 		  </noscript>
 		</a>
 		</span>
+		<div ng-if="portfolio.phone">
+			<div ng-bind-html="work.description"></div>
+			<a ng-href="{{work.url}}">{{work.url}}</a>
+		</div>
 	</article>
 		
-	<article class="frame work-details" ng-if="select.detailsOpen">
+	<article class="frame work-details" ng-if="select.detailsOpen && !portfolio.phone">
 		<div class="bit-3 work-text">
 			<h3>{{portfolio.work[select.selectedWork].name}}</h3>
 			<div ng-bind-html="portfolio.work[select.selectedWork].description"></div>

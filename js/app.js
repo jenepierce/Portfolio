@@ -1,12 +1,15 @@
 (function(){
-	var app = angular.module('portfolio',['ng.picturefill','ngSanitize']);
+	var app = angular.module('portfolio',['ng.picturefill','ngSanitize','matchmedia-ng']);
 	
-	app.controller('PortfolioController', ['$http', function($http){
+	app.controller('PortfolioController', ['$http', 'matchmedia', function($http, matchmedia){
+    //Get the portfolio data
 		var portfolio = this;
     portfolio.work = [];
     $http.get('json/work.json').success(function(data){
       portfolio.work = data;
     });
+    //Add more media properties here when needed
+		portfolio.phone = matchmedia.isPhone();
 	}]);
 	
 	app.directive('portfolioNav', function(){
