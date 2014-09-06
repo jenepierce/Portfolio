@@ -188,7 +188,7 @@ a {
 img {
   max-width: 100%; }
 
-#nav, #masthead, #content, #colophone {
+#nav, #masthead, #content, #contact {
   margin: 0 3%; }
 
 @media screen and (min-width: 768px) {
@@ -480,6 +480,9 @@ body {
   padding-bottom: 3em; }
   #portfolio .work-details img {
     border-width: 1em; }
+#portfolio .work-text {
+  padding-right: 1.5em;
+  padding-bottom: 1em; }
 #portfolio .thumbnails {
   padding-bottom: 1.5em; }
   #portfolio .thumbnails h4 {
@@ -495,12 +498,6 @@ body {
     border: none; }
   #portfolio .thumbnails.active img {
     border-color: #eab32c; }
-
-.work-text {
-  padding-right: 1.5em; }
-  .reverse .work-text {
-    padding-right: 0;
-    padding-left: 1em; }
 
 #resume {
   padding-bottom: 1.5em; }

@@ -9,6 +9,10 @@
 			border-width: 1em;
 		}
 	}
+	.work-text{
+		padding-right: 1.5em;
+		padding-bottom: 1em;
+	}
 	.thumbnails{
 		padding-bottom: $emlineheight; 
 		h4{
@@ -27,13 +31,6 @@
 		&.active img{
 			border-color: $gold;
 		}
-	}
-}
-.work-text{
-	padding-right: 1.5em;
-	.reverse & {
-		padding-right: 0;
-		padding-left: 1em;
 	}
 }
 #resume{
