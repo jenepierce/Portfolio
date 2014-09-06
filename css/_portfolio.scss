@@ -3,18 +3,29 @@
 	@include borderbox;	
 }
 #portfolio{
-	img{
-		border: 1px solid #eee;
-	}
-	article{ 
-		padding-bottom: $emlineheight; 
-	}
-	&.detailed-portfolio{
+	.work-details{
+		padding-bottom: $emlineheight*2;
 		img {
 			border-width: 1em;
 		}
-		article{
-			padding-bottom: $emlineheight*2;
+	}
+	.thumbnails{
+		padding-bottom: $emlineheight; 
+		h4{
+			white-space: nowrap;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		}
+		img{
+			border: 2px solid #eee;
+			transition:border .25s ease;
+			&:hover{
+				border-color: $blue;
+			}
+		}
+		a{ border: none; }
+		&.active img{
+			border-color: $gold;
 		}
 	}
 }

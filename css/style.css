@@ -1,5 +1,5 @@
 /* Tag Resets */
-body, div, h1, h2, legend, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section {
+body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section {
   margin: 0;
   padding: 0;
   border: 0; }
@@ -195,7 +195,7 @@ img {
   #nav, #masthead, #content, #colophone {
     margin: 0 5%; } }
 
-h1, h2, legend, h3 {
+h1, h2, h3 {
   font-family: 'Dosis', Arial, sans-serif;
   font-weight: 300; }
 
@@ -203,7 +203,7 @@ h1 {
   font-size: 2.64286em;
   line-height: 1.13514em; }
 
-h2, legend {
+h2 {
   display: block;
   font-size: 1.64286em;
   line-height: 1.82609em; }
@@ -223,6 +223,16 @@ h5 {
   h5 span {
     color: #666;
     display: block; }
+
+.dark-background {
+  background: #352a38;
+  color: #eee; }
+  .dark-background a {
+    color: #97CBE8;
+    border-color: #97CBE8; }
+    .dark-background a:hover {
+      color: #eab32c;
+      border-color: #eab32c; }
 
 /*
 *
@@ -247,6 +257,7 @@ h5 {
 
 /* Set the width of the grid */
 .frame {
+  clear: both;
   margin: 0 auto;
   position: relative; }
 
@@ -465,14 +476,25 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-#portfolio img {
-  border: 1px solid #eee; }
-#portfolio article {
-  padding-bottom: 1.5em; }
-#portfolio.detailed-portfolio img {
-  border-width: 1em; }
-#portfolio.detailed-portfolio article {
+#portfolio .work-details {
   padding-bottom: 3em; }
+  #portfolio .work-details img {
+    border-width: 1em; }
+#portfolio .thumbnails {
+  padding-bottom: 1.5em; }
+  #portfolio .thumbnails h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  #portfolio .thumbnails img {
+    border: 2px solid #eee;
+    transition: border 0.25s ease; }
+    #portfolio .thumbnails img:hover {
+      border-color: #97CBE8; }
+  #portfolio .thumbnails a {
+    border: none; }
+  #portfolio .thumbnails.active img {
+    border-color: #eab32c; }
 
 .work-text {
   padding-right: 1.5em; }
@@ -497,71 +519,8 @@ body {
     clear: right;
     width: 33.333%; } }
 
-/* Footer and Form Styles, _footer.scss */
 #container-footer {
-  background: #352a38;
-  color: #eee; }
-
-
-label {
-  display: block; }
-
-input, textarea {
-  font-family: 'Lato', Arial, sans-serif;
-  font-weight: 400; }
-
-input, textarea, button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 0;
-  margin-bottom: 0.75em;
-  padding: 0.375em;
-  width: 100%; }
-
-input[type=submit], button {
-  padding: 0.975em;
-  border: 0;
-  background-color: #97CBE8; }
-  input[type=submit]:hover, button:hover {
-    background-color: #ffe147; }
-
-textarea {
-  font-size: 0.875emrem; }
-
-form .group {
-  list-style: none;
-  padding-bottom: 0; }
-
-#message {
-  height: 6em; }
-
-.name, .email, .message {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-@media screen and (min-width: 768px) {
-  .name {
-    padding-right: 0.875em; }
-  .name, .email {
-    float: left;
-    width: 50%; } }
-
-@media screen and (min-width: 960px) {
-  .name, .email {
-    clear: both;
-    padding-right: 0.875em; }
-  #message {
-    width: 50%; }
-  .send {
-    width: 49%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; } }
+  padding: 1em 0; }
 
 .tinytext {
   font-size: 0.78571em;

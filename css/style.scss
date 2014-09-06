@@ -121,11 +121,29 @@ h5{
 	}
 }
 
+// Dark option
+.dark-background{
+	background: $purple;
+	color: $offwhite;
+	a{
+		color: $blue;
+		border-color: $blue;
+		&:hover{
+			color: $gold;
+			border-color: $gold;
+		}
+	}
+}
+
 @import "_lemonade";
 @import "_nav";
 @import "_header";
 @import "_portfolio";
-@import "_footer";
+
+//Footer
+#container-footer{
+	padding: 1em 0;
+}
 
 .tinytext{ // 11px recommended 
 	font-size: em(11px);
