@@ -40,13 +40,11 @@ module.exports = function(grunt) {
         }]
       }
     },
-    sass: {
+    compass: {
       dist: {
         options: {
-          style: 'compressed'
-        },
-        files: {
-          'css/style.css': 'css/style.scss'
+          sassDir: 'sass',
+          cssDir: 'css'
         }
       }
     },
@@ -63,7 +61,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['css/*.scss'],
-        tasks: ['sass'],
+        tasks: ['compass'],
         options: {
           spawn: false,
         }
@@ -77,9 +75,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'watch']);
+  grunt.registerTask('default', ['concat', 'uglify', 'watch']);
+  grunt.registerTask('imagemin', ['imagemin']);
 
 };
