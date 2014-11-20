@@ -1,3 +1,4 @@
 # Ignore Sass cache #
 **/.sass-cache/*
+**/node_modules/*
 archive*
