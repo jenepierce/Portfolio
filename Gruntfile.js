@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         },
       },
       css: {
-        files: ['css/*.scss'],
+        files: '**/*.scss',
         tasks: ['compass'],
         options: {
           spawn: false,
