@@ -48,9 +48,24 @@ module.exports = function(grunt) {
         }
       }
     },
+    // coffee: {
+    //   compile: {
+    //     files: {
+    //       'path/to/result.js': 'path/to/source.coffee', // 1:1 compile
+    //       'path/to/another.js': ['path/to/sources/*.coffee', 'path/to/more/*.coffee'] // compile and concat into single file
+    //     }
+    //   }
+    // },
     watch: {
       // options: {
       //   livereload: true,
+      // },
+      // coffee: {
+      //   files: ['js/*.js'],
+      //   tasks: ['coffee'], // concat, uglify?
+      //   options: {
+      //     spawn: false
+      //   }
       // },
       scripts: {
         files: ['js/*.js'],
@@ -82,6 +97,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  // grunt.loadNpmTasks('grunt-contrib-coffee')
 
   // Where we tell Grunt what to do when we type "grunt" into the terminal.
   grunt.registerTask('default', ['concat', 'uglify', 'watch']);
