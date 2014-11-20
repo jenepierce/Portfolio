@@ -56,14 +56,20 @@ module.exports = function(grunt) {
         files: ['js/*.js'],
         tasks: ['concat', 'uglify'],
         options: {
-          spawn: false,
-        },
+          spawn: false
+        }
       },
       css: {
         files: '**/*.scss',
         tasks: ['compass'],
         options: {
           spawn: false,
+        }
+      },
+      html: {
+        files: ['index.html', 'templates/*.html'],
+        options: {
+          spawn: false
         }
       }
     }
