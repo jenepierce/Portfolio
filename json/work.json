@@ -5,9 +5,9 @@
     "url": "http://alumni.morrisville.edu",
     "order": 0,
     "images": [
-      "img/AlumniAndFriends-s.jpg",
-      "img/AlumniAndFriends-m.jpg",
-      "img/AlumniAndFriends-l.jpg"
+      "img/build/AlumniAndFriends-s.jpg",
+      "img/build/AlumniAndFriends-m.jpg",
+      "img/build/AlumniAndFriends-l.jpg"
     ]
   },
   {
@@ -16,9 +16,9 @@
     "url": "http://www.morrisville.edu",
     "order": 1,
     "images": [
-      "img/Morrisville-s.jpg",
-      "img/Morrisville-m.jpg",
-      "img/Morrisville-l.jpg"
+      "img/build/Morrisville-s.jpg",
+      "img/build/Morrisville-m.jpg",
+      "img/build/Morrisville-l.jpg"
     ]
   },
   {
@@ -27,9 +27,9 @@
     "url": "http://equinerehab.morrisville.edu",
     "order": 2,
     "images": [
-      "img/EquineRehab-s.jpg",
-      "img/EquineRehab-m.jpg",
-      "img/EquineRehab-l.jpg"
+      "img/build/EquineRehab-s.jpg",
+      "img/build/EquineRehab-m.jpg",
+      "img/build/EquineRehab-l.jpg"
     ]
   },
   {
@@ -38,9 +38,9 @@
     "url": "http://iceplex.morrisville.edu",
     "order": 3,
     "images": [
-      "img/IcePlex-s.jpg",
-      "img/IcePlex-m.jpg",
-      "img/IcePlex-l.jpg"
+      "img/build/IcePlex-s.jpg",
+      "img/build/IcePlex-m.jpg",
+      "img/build/IcePlex-l.jpg"
     ]
   },
   {
@@ -49,9 +49,9 @@
     "url": "http://www.copperturret.com",
     "order": 4,
     "images": [
-      "img/CopperTurret-s.jpg",
-      "img/CopperTurret-m.jpg",
-      "img/CopperTurret-l.jpg"
+      "img/build/CopperTurret-s.jpg",
+      "img/build/CopperTurret-m.jpg",
+      "img/build/CopperTurret-l.jpg"
     ]
   },
   {
@@ -60,9 +60,9 @@
     "url": "http://dining.morrisville.edu",
     "order": 5,
     "images": [
-      "img/Dining-s.jpg",
-      "img/Dining-m.jpg",
-      "img/Dining-l.jpg"
+      "img/build/Dining-s.jpg",
+      "img/build/Dining-m.jpg",
+      "img/build/Dining-l.jpg"
     ]
   }
 ]
