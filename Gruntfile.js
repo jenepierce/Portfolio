@@ -7,23 +7,22 @@ module.exports = function(grunt) {
     concat: {
       // Configuration for concatinating files goes here.
       dist: {
-        src: [
-          'js/googleanalytics.js',
-          'bower_components/angular/angular.js', // All bower components
-          'bower_components/picturefill/picturefill.js',
-          'bower_components/angular-picturefill/angular-picturefill.js',
-          'bower_components/angular-sanitize/angular-sanitize.min.js',
-          'bower_components/matchmedia-ng/matchmedia-ng.js',
-          'bower_components/matchmedia/matchmedia.js',
-          'js/app.js',
-          'js/hideaddressbar.js', // Normalize hide address bar for iOS and Android
-          'js/respond.min.js', // Add media query support for IE8 and under. Must place media queries in external stylesheet
-          'js/matchmedia.js' // Using matchmedia to provide support for IE8 and below + older browsers
-          // 'js/*.js' // All JS
-        ],
+        src: ['js/*.js'],
         dest: 'js/build/production.js',
       }
     },
+    bower_concat: {
+		  all: {
+		    dest: 'js/_bower.js',
+		    dependencies: {
+		      'angular-picturefill': 'angular',
+		      'angular-sanitize': 'angular'
+		    },
+		    bowerOptions: {
+		      relative: false
+		    }
+		  }
+		},
     uglify: {
       build: {
         src: 'js/build/production.js',
@@ -97,10 +96,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  // grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-bower-concat');
+  // grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['concat', 'uglify', 'watch']);
+  grunt.registerTask('build', ['bower_concat', 'concat', 'compass', 'uglify']);
+  grunt.registerTask('default', ['bower_concat', 'concat', 'uglify', 'watch']);
   grunt.registerTask('imagemin', ['imagemin']);
 
 };
