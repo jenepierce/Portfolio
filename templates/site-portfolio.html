@@ -5,19 +5,16 @@
 	
 	<article class="bit-3 thumbnails" ng-repeat="work in portfolio.work" ng-class="{'active':portfolio.isSelected($index), 'bit-6':portfolio.detailsOpen}" -->
 		<h4>{{work.name}}</h4>
-		<span picture-fill data-alt="{{work.name}}" ng-if="work.images.length">
-		<a href ng-click="portfolio.selectWork($index)">
-		  <span pf-src="{{work.images[0]}}"></span>
-		  <span pf-src="{{work.images[1]}}" data-media="(min-width: 480px) and (max-width: 768px)"></span>
-		  <span pf-src="{{work.images[2]}}" data-media="(min-width: 1400px)"></span>
-		  <noscript>
-      	<img ng-src="{{work.images[0]}}" ng-alt="{{work.name}}">
-		  </noscript>
+		<a href ng-click="portfolio.selectWork($index)" ng-if="work.images.length">
+			<picture>
+				<source srcset="{{work.images[1]}}" media="(min-width: 480px) and (max-width: 768px)">
+				<source srcset="{{work.images[2]}}" media="(min-width: 1400px)">
+				<img src="{{work.images[0]}}" alt="{{work.name}}"/>
+			</picture>
 		</a>
-		</span>
 		<div ng-if="site.phone">
-			<div ng-bind-html="work.description"></div>
-			<a ng-href="{{work.url}}">{{work.url}}</a>
+		<div ng-bind-html="work.description"></div>
+		<a ng-if="work.url" ng-href="{{work.url}}">{{work.url}}</a>
 		</div>
 	</article>
 	
